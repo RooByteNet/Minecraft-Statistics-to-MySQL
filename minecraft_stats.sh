@@ -2,8 +2,8 @@
 # Runner for Minecraft stats sync on Ubuntu
 set -e
 
-SCRIPT_DIR="/home/ipl/PythonScripts/minecraft_stats"
-LOG_FILE="/home/ipl/mcstats-sync.log"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_FILE="$SCRIPT_DIR/mcstats-sync.log"
 
 echo "=== Minecraft Stats Sync ===" | tee -a "$LOG_FILE"
 echo "Started: $(date)" | tee -a "$LOG_FILE"
